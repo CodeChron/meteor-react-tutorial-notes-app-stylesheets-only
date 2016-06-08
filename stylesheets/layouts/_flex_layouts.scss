@@ -1,0 +1,50 @@
+.l-flex-main-content {
+  flex: 1;
+}
+
+// _________________________________
+//
+// FLEX COLUMN 
+// _________________________________
+
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.l-flex-column {
+  @include flex-column;
+}
+
+
+// _________________________________
+//
+// FLEX ROW with options for vertical/horizontal centering 
+// _________________________________
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+ 
+  &.l-flex-centered {
+  	 justify-content: center;
+  }  
+
+  &.l-flex-vertical-middle {
+  	align-items:center;
+  }  
+
+  // .l-flex-icon-column {
+  // 	 width: $l-flex-icon-column-width;
+  // }
+  // .l-flex-phantom-columns {
+  //   margin-left: 20%;
+  //   margin-right: 20%; 
+  // }
+}
+
+.l-flex-row {
+	@include flex-row;
+}
+
+
